@@ -1,8 +1,8 @@
 # SCO-MOF-Design
 
-This repository contains the Python implementation of a **Quantile Regression Tree–based Active Learning (QRT-AL)** framework for the screening and design of **spin-crossover metal–organic frameworks (SCO-MOFs)**.
+This repository contains the Python implementation of a **Quantile Regression Tree-based Active Learning (QRT-AL)** framework for the screening and design of **spin-crossover metal–organic frameworks (SCO-MOFs)**.
 
-It also includes **AiiDA–Quantum ESPRESSO workflows**, datasets, and DFT-computed and trained model (**ΔE<sub>H–L</sub>**) values developed and used in this work.
+It also includes **AiiDA-Quantum ESPRESSO workflows**, datasets, and DFT-computed and trained model (**ΔE<sub>H–L</sub>**) values developed and used in this work.
 
 ## Contents
 
