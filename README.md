@@ -6,7 +6,7 @@ It also includes **AiiDA-Quantum ESPRESSO workflows**, datasets, and DFT-compute
 
 ## Contents
 
-### Machine Learning and Active Learning
+### :robot: Machine Learning and Active Learning
 - Python code for the **QRT-AL algorithm**
 - Example demonstrating the application of QRT-AL to a MOF dataset
 - Quantile Random Forest (QRF) models trained using **revised autocorrelation descriptors (RACs)**
