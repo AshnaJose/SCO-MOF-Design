@@ -31,4 +31,4 @@ These workflows automate DFT calculations for reproducible high-throughput simul
 
 ## Citation
 
-If you use this code, workflows, or data in your research, please cite: 
+If you use this code, workflows, or data in your research, please cite: Predicting spin-crossover behavior in metal-organic frameworks from limited and noisy data using quantile Active Learning, Ashna, Jose and Emilie, Devijver and Martin, Uhrin and Noel, Jakse and Roberta, Poloni (2026) https://arxiv.org/abs/2603.03545
