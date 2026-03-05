@@ -11,24 +11,24 @@ It also includes **AiiDA-Quantum ESPRESSO workflows**, datasets, and DFT-compute
 - Example demonstrating the application of QRT-AL to a MOF dataset
 - Quantile Random Forest (QRF) models trained using **revised autocorrelation descriptors (RACs)**
 
-### AiiDA Workflows
+### :gear: AiiDA Workflows
 - `SCO-MOF-RelaxWorkChain` - geometry relaxation workflow
 - `SCO-MOF-SCF-WorkChain` - self-consistent field (SCF) calculation workflow
 
 These workflows automate DFT calculations for reproducible high-throughput simulations.
 
-### Data
+### :bar_chart: Data
 - Descriptor sets used for model training
 - DFT-computed spin-state energy differences (**ΔE<sub>H–L</sub>**) for training and test datasets
 - High-confidence predicted **ΔE<sub>H–L</sub>** values for the **pSCO-105** subset obtained using the QRF (RACs) model
 
-## Requirements
+## :toolbox: Requirements
 
 - Python
 - Quantum ESPRESSO
 - AiiDA
 - Required Python packages (as specified in the code)
 
-## Citation
+## :page_facing_up: Citation
 
 If you use this code, workflows, or data in your research, please cite: Predicting spin-crossover behavior in metal-organic frameworks from limited and noisy data using quantile Active Learning, Ashna, Jose and Emilie, Devijver and Martin, Uhrin and Noel, Jakse and Roberta, Poloni (2026) https://arxiv.org/abs/2603.03545
