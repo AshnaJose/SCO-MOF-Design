@@ -7,9 +7,7 @@ from sklearn import preprocessing, tree
 import scipy
 from math import sqrt
 
-# ==========================================================
 # 1. ACTIVE LEARNING PARAMETERS
-# ==========================================================
 
 maxlabel1 = 20    #initial set of samples labeled by random sampling or model-free AL method
 maxlabel4 = [maxlabel1]
@@ -24,27 +22,21 @@ from tree_q import Regression_Tree_q
 MOFs_selected_rtq=[]
 MOF_rt_newq = []
 
-# ==========================================================
 # 2. QUANTILE INTERVALS (used for leaf selection)
-# ==========================================================
 
 quantile1=0.05
 quantile2=0.4
 quantile3=0.95
 quantile4=1
 
-# ==========================================================
 # 3. LOAD TRAINING POOL
-# ==========================================================
 
 df = pd.read_csv('racs_train.csv').dropna() #features
 X = df.to_numpy()
 feat=len(X[0])-1
 print('Length of feature vector = ', feat)
 
-# ==========================================================
 # 4. LOAD INITIAL LABELED SET
-# ==========================================================
 
 # set of initially labeled samples (selected and labeled randomly)
 init_samples_path = 'train_init.csv' 
@@ -74,9 +66,7 @@ for i in (-np.sort(-indices)):
 print('Current training pool = ',len(train_pool))
 print('Labeled indices = ',indices.astype(int))
 
-# ==========================================================
 # 5. VISUALIZE INITIAL LABEL DISTRIBUTION
-# ==========================================================
 
 import matplotlib.pyplot as plt
 plt.hist(Y,10)
@@ -88,9 +78,7 @@ Y_train = Y
 X_train_newq = initial_training_set
 Y_train_newq = Y    
 
-# ==========================================================
 # 6. TRAIN REGRESSION TREE (RTq)
-# ==========================================================
 
 # input the data into the tree and fit it using the current training set
 RTq = Regression_Tree_q(seed=treeseed,min_samples_leaf = 5)
@@ -108,9 +96,7 @@ plt.savefig('tree.png', dpi=300)
 for p in indices.astype(int):
         MOF_rt_newq = np.append(MOF_rt_newq,X_train_full[p][0])
 
-# ==========================================================
 # 7. ACTIVE LEARNING LOOP
-# ==========================================================
 
 for i,j in enumerate(maxlabel2):
 
@@ -147,9 +133,7 @@ for i,j in enumerate(maxlabel2):
 
     X_train_newq = np.hsplit(X_train_newq,len(X_train_newq)/int(feat+1))
 
-# ==========================================================
 # 8. SAVE SELECTED SAMPLES
-# ==========================================================
 
 MOFs_selected_rtq = MOF_rt_newq
 np.savetxt("RTq_selected.csv", MOFs_selected_rtq, fmt="%s",delimiter=",")
