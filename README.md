@@ -12,7 +12,6 @@ It also includes **AiiDA-Quantum ESPRESSO workflows**, datasets, and DFT-compute
 - Quantile Random Forest (QRF) models trained using **revised autocorrelation descriptors (RACs)**
 
 ### :gear: AiiDA Workflows
-- `SCO-MOF-RelaxWorkChain` - geometry relaxation workflow
 - `SCO-MOF-SCF-WorkChain` - self-consistent field (SCF) calculation workflow
 
 These workflows automate DFT calculations for reproducible high-throughput simulations.
